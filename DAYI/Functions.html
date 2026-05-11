@@ -67,7 +67,7 @@
       // IIFE - Immediately invocable function expression
       // 1. Its executed only once
       // 2. Initialization logic can go in an IIFE (Loading of the webpage)
-      // 3.
+      // 3. Used as Module Revealing pattern
 
       // Simple IIFE
 
@@ -79,6 +79,12 @@
       (function (msg) {
         console.log(msg);
       })("IIFE invoked!");
+
+      // Write an IIFE for Add function
+
+      (function (x, y) {
+        console.log(x + y);
+      })(20, 30);
     </script>
   </head>
   <body></body>
