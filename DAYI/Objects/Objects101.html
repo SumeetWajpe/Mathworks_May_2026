@@ -60,6 +60,9 @@
 
       let player = Object.create(person);
       player.sport = "Tennis";
+
+      console.log(player.hasOwnProperty("sport")); //true
+      console.log(player.hasOwnProperty("name")); //false
     </script>
   </head>
   <body></body>
