@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      //   function Test() {
+      //     console.log(this);
+      //   }
+      //   Test();
+
+      //   function Car() {
+      //     this.name = "BMW";
+      //     this.speed = 200;
+      //   }
+
+      //   let carObj = new Car();
+
+      function Car() {
+        this.name = "BMW";
+        this.speed = 200;
+        var _this = this;
+        setTimeout(function () {
+          console.log(_this.speed);
+        }, 2000);
+      }
+
+      let carObj = new Car();
+    </script>
+  </head>
+  <body></body>
+</html>
