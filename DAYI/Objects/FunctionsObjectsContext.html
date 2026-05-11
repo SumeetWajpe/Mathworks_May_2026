@@ -28,6 +28,22 @@
       let greetingBindedWithAnotherPerson = person.greeting.bind(anotherPerson);
       /// after 100 lines of code
       greetingBindedWithAnotherPerson("Bye");
+
+      function Shape() {
+        this.breadth = 10;
+        this.length = 10;
+      }
+
+      function Rect() {
+        // Shape.call(this);
+        // Rect {breadth: 10, length: 10, isSquare: false}
+        this.isSquare = false;
+      }
+
+      Rect.prototype = new Shape();
+    //   Rect {isSquare: false}
+
+      var rect = new Rect();
     </script>
   </head>
   <body></body>
