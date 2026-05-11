@@ -13,21 +13,35 @@
       //   var moreCars = new Array("TATA", "MARUTI");
 
       //1. Object Literal Syntax
-      var person = {
-        name: "Carlos Alcaraz",
-        age: 22,
-        stats: {
-          worldRanking: 2,
-          favShot: "DropShot",
-          wasSeededNo1: true,
-        },
-        printDetails: function () {
-          console.log( this.name + " is " + this.age + " years old !");
-        },
-      };
-      person.stats.favShot = "Forehand";
+      //   var person = {
+      //     name: "Carlos Alcaraz",
+      //     age: 22,
+      //     stats: {
+      //       worldRanking: 2,
+      //       favShot: "DropShot",
+      //       wasSeededNo1: true,
+      //     },
+      //     printDetails: function () {
+      //       console.log(this.name + " is " + this.age + " years old !");
+      //     },
+      //   };
+      //   person.stats.favShot = "Forehand";
       //   person.sport = "Tennis";
-      person.printDetails();
+      //   person.printDetails();
+
+      //2. using the Object object
+      var person = new Object();
+      person.name = "Yannik Sinner";
+      person.sport = "Tennis";
+
+      //3. Custom Constructor (old) ->  ES6 -> Classes (New)
+
+      function Car() {
+        this.name = "BMW";
+        this.speed = 200;
+      }
+
+      var carObj = new Car();
     </script>
   </head>
   <body></body>
