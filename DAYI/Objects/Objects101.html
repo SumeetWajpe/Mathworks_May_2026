@@ -42,6 +42,16 @@
       }
 
       var carObj = new Car();
+
+      function JamesBondCar() {
+        this.canFly = true;
+        this.canSubmerge = true;
+      }
+
+      JamesBondCar.prototype = new Car();
+      var jbc = new JamesBondCar();
+
+   
     </script>
   </head>
   <body></body>
