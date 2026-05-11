@@ -27,11 +27,15 @@
       //     }, 2000);
       //   }
 
+      function CallBack() {
+        console.log(this.speed);
+      }
+
       // With ES 6 (Arrow Functions)
       function Car() {
         this.name = "BMW";
         this.speed = 200;
-        setTimeout(() => console.log(this.speed), 2000); // The context with Arrow function gets binded at the time of creation of the function
+        setTimeout(CallBack.bind(this), 2000); // The context with Arrow function gets binded at the time of creation of the function
       }
       let carObj = new Car();
 
