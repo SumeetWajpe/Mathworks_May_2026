@@ -18,12 +18,30 @@
 
       //   HelloJS();
 
-      if (true) {
-        let x = 100; // ES6. -> block scoping
-        console.log(x);
-        // after 100 lines of code
-        // let x = 200;// error !
+      //   if (true) {
+      //     let x = 100; // ES6. -> block scoping
+      //     console.log(x);
+      //     // after 100 lines of code
+      //     // let x = 200;// error !
+      //   }
+
+      let x;
+      x = 1000; // not set in the window context
+      console.log(x);
+
+      // constant
+      const PI = 3.14;
+      //   PI = 3.14545; // Error
+
+      //   const PI; // Error
+      //   PI = 3.14;
+
+      {
+        const PI = 3.1455545; // block scope
+        console.log(PI);
       }
+
+      console.log(PI);
     </script>
   </head>
   <body></body>
