@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script>
+      console.log(Test()); // Function hoisting
+
+      
       //   var x = 100; // global variable
       //   var msg = "Hello Javascript !";
       //   console.log(x);
@@ -25,31 +28,42 @@
       //     // let x = 200;// error !
       //   }
 
-      let x;
-      x = 1000; // not set in the window context
-      console.log(x);
+      //   let x;
+      //   x = 1000; // not set in the window context
+      //   console.log(x);
 
       // constant
-      const PI = 3.14;
+      //   const PI = 3.14;
       //   PI = 3.14545; // Error
 
       //   const PI; // Error
       //   PI = 3.14;
 
-      {
-        const PI = 3.1455545; // block scope
-        console.log(PI);
-      }
+      //   {
+      //     const PI = 3.1455545; // block scope
+      //     console.log(PI);
+      //   }
 
-      console.log(PI);
+      //   console.log(PI);
 
-      const person = {
-        name: "Djokovic",
-        sport: "Tennis",
-      };
+      //   const person = {
+      //     name: "Djokovic",
+      //     sport: "Tennis",
+      //   };
 
       //   person = { name: "Novak Djokovic" };
-      person.name = "Novak Djokovic";
+      //   person.name = "Novak Djokovic";
+
+      //console.log(x);
+      // var x; // variable hoisting
+      let x; // stops variable hoisting
+
+      x = 100;
+
+      function Test() {
+        return "Test hoisting 1 2 3 ..";
+      }
+
     </script>
   </head>
   <body></body>
