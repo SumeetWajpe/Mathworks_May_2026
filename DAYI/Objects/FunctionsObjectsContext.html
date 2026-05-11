@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var person = {
+        name: "Novak",
+        greeting: function (greeting) {
+          console.log(greeting + " " + this.name + " !");
+        },
+      };
+
+      person.greeting("Hey");
+
+      var anotherPerson = { name: "Carlos" };
+
+      // call , apply , bind (function)
+
+      person.greeting.call(anotherPerson, "Hello");
+    </script>
+  </head>
+  <body></body>
+</html>
