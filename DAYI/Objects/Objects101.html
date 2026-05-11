@@ -51,7 +51,15 @@
       JamesBondCar.prototype = new Car();
       var jbc = new JamesBondCar();
 
-   
+      var o = Object.create(null);
+
+      var person = {
+        name: "Carlos Alcaraz",
+        age: 22,
+      };
+
+      let player = Object.create(person);
+      player.sport = "Tennis";
     </script>
   </head>
   <body></body>
