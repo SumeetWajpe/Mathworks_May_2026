@@ -18,15 +18,21 @@
 
       //   let carObj = new Car();
 
+      //   function Car() {
+      //     this.name = "BMW";
+      //     this.speed = 200;
+      //     var _this = this;
+      //     setTimeout(function () {
+      //       console.log(_this.speed);
+      //     }, 2000);
+      //   }
+
+      // With ES 6 (Arrow Functions)
       function Car() {
         this.name = "BMW";
         this.speed = 200;
-        var _this = this;
-        setTimeout(function () {
-          console.log(_this.speed);
-        }, 2000);
+        setTimeout(() => console.log(this.speed), 2000); // The context with Arrow function gets binded at the time of creation of the function
       }
-
       let carObj = new Car();
     </script>
   </head>
