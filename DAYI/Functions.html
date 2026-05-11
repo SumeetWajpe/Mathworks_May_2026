@@ -6,19 +6,24 @@
     <title>Document</title>
     <script>
       //1. Function declaration syntax
-      //   function PrintPerson() {
-      //     console.log("I am a person !");
-      //   }
+      function PrintPerson() {
+        console.log("I am a person !");
+      }
 
       //   PrintPerson();
 
       // 2. Using Function as an expression
-      console.log(Person);
+      // console.log(Person); // undefined
 
-      Person();
-      let Person = function () {
-        console.log("I am a person !");
-      };
+      //   Person(); // Error as only Person variable gets hoisted and not the entire function
+      //   var Person = function () {
+      //     console.log("I am a person !");
+      //   };
+
+      //3. Using Function object
+
+      var Add = new Function("x", "y", "return x + y");
+      console.log("The result is " + Add(10, 30));
     </script>
   </head>
   <body></body>
