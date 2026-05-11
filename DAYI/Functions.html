@@ -12,10 +12,10 @@
 
       //   PrintPerson();
 
-      function Add(x, y) {
-        return x + y;
-      }
-      console.log("The result is " + Add(10, 30));
+      //   function Add(x, y) {
+      //     return x + y;
+      //   }
+      //   console.log("The result is " + Add(10, 30));
 
       // 2. Using Function as an expression
       // console.log(Person); // undefined
@@ -32,17 +32,37 @@
 
       //4. ES6 -> Arrow Function (Lambdas)
 
-      var Add = function (x, y) {
-        return x + y;
-      };
-      // OR (Arrow Function)
+      //   var Add = function (x, y) {
+      //     return x + y;
+      //   };
+      //   // OR (Arrow Function)
 
-      var Add = (x, y) => {
-        return x + y;
-      };
+      //   var Add = (x, y) => {
+      //     return x + y;
+      //   };
 
       // OR (Optimized)
+
       var Add = (x, y) => x + y;
+      console.log("The result is " + Add(40, 30));
+
+      //   function PrintBook(title, author, noOfPages) {
+      //     console.log(title, author, noOfPages);
+      //   }
+
+      //   PrintBook("Pavankhind", "Ranjit Desai", 200);
+
+      // OR
+
+      var PrintBook = (title, author, noOfPages) =>
+        console.log(title, author, noOfPages);
+      PrintBook("Pavankhind", "Ranjit Desai", 200);
+
+      //   function Test() {
+      //     return "Testing 1 2 3..";
+      //   }
+
+      var Test = () => "Testing 1 2 3.."; // with no parameter list
     </script>
   </head>
   <body></body>
