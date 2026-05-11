@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //   var x = 100;
+      //   var b = true;
+      //   var s = "Hello !";
+      //   var person = { name: "Carlos Alcaraz", age: 22 };
+      //   var cars = ["BMW", "AUDI", "MERC"];
+      //   var moreCars = new Array("TATA", "MARUTI");
+
+      //1. Object Literal Syntax
+      var person = {
+        name: "Carlos Alcaraz",
+        age: 22,
+        stats: {
+          worldRanking: 2,
+          favShot: "DropShot",
+          wasSeededNo1: true,
+        },
+        printDetails: function () {
+          console.log( this.name + " is " + this.age + " years old !");
+        },
+      };
+      person.stats.favShot = "Forehand";
+      //   person.sport = "Tennis";
+      person.printDetails();
+    </script>
+  </head>
+  <body></body>
+</html>
