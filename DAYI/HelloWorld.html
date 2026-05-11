@@ -5,16 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script>
-      var x = 100; // global variable
-      var msg = "Hello Javascript !";
-      console.log(x);
-      console.log(msg);
+      //   var x = 100; // global variable
+      //   var msg = "Hello Javascript !";
+      //   console.log(x);
+      //   console.log(msg);
 
-      function HelloJS() {
-        return "Hello Javascript !";
+      //   function HelloJS() {
+      //     var y = 200; // function scoped
+      //     console.log(y);
+      //     return "Hello Javascript !";
+      //   }
+
+      //   HelloJS();
+
+      if (true) {
+        let x = 100; // ES6. -> block scoping
+        console.log(x);
+        // after 100 lines of code
+        // let x = 200;// error !
       }
-
-      HelloJS();
     </script>
   </head>
   <body></body>
