@@ -7,8 +7,8 @@
     <script>
       var person = {
         name: "Novak",
-        greeting: function (greeting) {
-          console.log(greeting + " " + this.name + " !");
+        greeting: function (theGreeting) {
+          console.log(theGreeting + " " + this.name + " !");
         },
       };
 
@@ -17,8 +17,17 @@
       var anotherPerson = { name: "Carlos" };
 
       // call , apply , bind (function)
+      // call -> immediate call with another person as context
 
       person.greeting.call(anotherPerson, "Hello");
+
+      // apply -> immediate call with another person as context
+      person.greeting.apply(anotherPerson, ["Hola"]);
+
+      // bind -> doesn't place (invoke) the method but return you the function binded with the context
+      let greetingBindedWithAnotherPerson = person.greeting.bind(anotherPerson);
+      /// after 100 lines of code
+      greetingBindedWithAnotherPerson("Bye");
     </script>
   </head>
   <body></body>
