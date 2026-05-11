@@ -43,8 +43,8 @@
 
       // OR (Optimized)
 
-      var Add = (x, y) => x + y;
-      console.log("The result is " + Add(40, 30));
+      //   var Add = (x, y) => x + y;
+      //   console.log("The result is " + Add(40, 30));
 
       //   function PrintBook(title, author, noOfPages) {
       //     console.log(title, author, noOfPages);
@@ -54,15 +54,15 @@
 
       // OR
 
-      var PrintBook = (title, author, noOfPages) =>
-        console.log(title, author, noOfPages);
-      PrintBook("Pavankhind", "Ranjit Desai", 200);
+      //   var PrintBook = (title, author, noOfPages) =>
+      //     console.log(title, author, noOfPages);
+      //   PrintBook("Pavankhind", "Ranjit Desai", 200);
 
       //   function Test() {
       //     return "Testing 1 2 3..";
       //   }
 
-      var Test = () => "Testing 1 2 3.."; // with no parameter list
+      // var Test = () => "Testing 1 2 3.."; // with no parameter list
 
       // IIFE - Immediately invocable function expression
       // 1. Its executed only once
@@ -71,20 +71,68 @@
 
       // Simple IIFE
 
-      (function () {
-        console.log("IIFE..");
-      })();
+      //   (function () {
+      //     console.log("IIFE..");
+      //   })();
 
-      // IIFE with parameter
-      (function (msg) {
-        console.log(msg);
-      })("IIFE invoked!");
+      //   // IIFE with parameter
+      //   (function (msg) {
+      //     console.log(msg);
+      //   })("IIFE invoked!");
 
-      // Write an IIFE for Add function
+      //   // Write an IIFE for Add function
 
-      (function (x, y) {
-        console.log(x + y);
-      })(20, 30);
+      //   (function (x, y) {
+      //     console.log(x + y);
+      //   })(20, 30);
+
+      // Nested Functions
+
+      //   function Outer() {
+      //     var x = 10;
+      //     console.log("Outer function");
+
+      //     function Inner() {
+      //       console.log(x);
+      //       console.log("Inner function");
+      //     }
+      //     Inner();
+      //   }
+
+      //   Outer();
+
+      // Functions that return a function
+
+      function Outer() {
+        var x = 100; // closure variable
+        console.log("Outer function");
+
+        return function () {
+          console.log("Inner function");
+          console.log(x);
+        };
+      }
+
+      var Inner = Outer();
+      Inner();
+
+      // OR Outer()(); // Chaining / Function Currying
+
+      function Counter() {
+        var count = 0;
+        var anotherCount = 1000;
+
+        return function () {
+          count++;
+          console.log(count);
+        };
+      }
+
+      var MyCounter = Counter();
+      // 100 lines 
+      MyCounter(); // 1
+      MyCounter(); // 2
+      MyCounter(); // 3
     </script>
   </head>
   <body></body>

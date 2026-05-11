@@ -5,15 +5,16 @@ var MathModule = (function () {
 
   function Subtract() {}
 
-  function Multiply() {
-    Subtract();
-    Divide();
+  function Multiply(x, y) {
+    return x * y;
+    // Subtract();
+    // Divide();
   }
 
   function Divide() {}
 
   return {
-    Add: Add,
-    Multiply: Multiply,
+    Addition: Add,
+    Product: Multiply,
   };
 })();
