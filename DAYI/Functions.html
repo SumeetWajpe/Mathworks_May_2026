@@ -63,6 +63,22 @@
       //   }
 
       var Test = () => "Testing 1 2 3.."; // with no parameter list
+
+      // IIFE - Immediately invocable function expression
+      // 1. Its executed only once
+      // 2. Initialization logic can go in an IIFE (Loading of the webpage)
+      // 3.
+
+      // Simple IIFE
+
+      (function () {
+        console.log("IIFE..");
+      })();
+
+      // IIFE with parameter
+      (function (msg) {
+        console.log(msg);
+      })("IIFE invoked!");
     </script>
   </head>
   <body></body>
