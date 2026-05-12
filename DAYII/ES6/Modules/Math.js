@@ -3,9 +3,12 @@ export default function Add(x, y) {
 }
 
 function Subtract(x, y) {
-  x - y;
+  return x - y;
 }
 
-function Multiply(x, y) {
+export function Multiply(x, y) {
   return x * y;
+}
+export function Divide(x, y) {
+  return x / y;
 }
