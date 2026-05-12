@@ -7,17 +7,33 @@
   </head>
   <body>
     <div id="target"></div>
+    <input type="button" value="Remove Listener" onclick="RemoveListerner()" />
 
     <script>
       let newButton = document.createElement("input");
+      newButton.id = "newBtn";
       newButton.type = "button";
       newButton.value = "Show Message !";
-      newButton.onclick = function () {
-        console.log("U Clicked !");
-      };
+      // DOM
+      //   newButton.onclick = function (e = event) {
+      //     console.log(e.type); // click
+      //     // console.log(e.target); // button DOM object
+      //     console.log("U Clicked !");
+      //   };
+
+      function ClickHandler() {
+        console.log("U clicked !");
+      }
+      // Using addEventListner
+      newButton.addEventListener("click", ClickHandler);
       let targetDiv = document.getElementById("target");
 
       targetDiv.appendChild(newButton);
+
+      function RemoveListerner() {
+        let newBtn = document.getElementById("newBtn");
+        newBtn.removeEventListener("click", ClickHandler);
+      }
     </script>
   </body>
 </html>
