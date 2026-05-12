@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function AddSportToTheList() {
+        let theSportName = document.getElementById("txtSportName");
+        let sportList = document.getElementById("sportList");
+        //sportList.innerHTML += "<li>" + theSportName + "</li>";
+
+        let newListItem = document.createElement("li");
+        newListItem.innerText = theSportName.value;
+        sportList.appendChild(newListItem);
+        theSportName.value = "";
+      }
+    </script>
+  </head>
+  <body>
+    <h3>Fav Sports</h3>
+    <label for="txtSportName">Enter Fav Sport :</label>
+    <input type="text" id="txtSportName" />
+    <ul id="sportList">
+      <li>Tennis</li>
+      <li>Cricket</li>
+    </ul>
+
+    <input type="button" value="Add" onclick="AddSportToTheList()" />
+  </body>
+</html>
