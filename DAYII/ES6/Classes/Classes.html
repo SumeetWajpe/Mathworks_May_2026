@@ -11,7 +11,7 @@
           this.speed = speed;
         }
         accelerate() {
-          console.log(`The car ${this.name} is running @ ${this.speed} kmph !`);
+          return `The car ${this.name} is running @ ${this.speed} kmph `;
         }
       }
 
@@ -24,9 +24,20 @@
           this.canFly = canFly;
           this.canSubmerge = canSubmerge;
         }
+        accelerate() {
+          return super.accelerate() + " Can Fly ? " + this.canFly;
+        }
       }
 
       let jbc = new JamesBondCar("Aston Martin", 200, true, false);
+      console.log(jbc.accelerate());
+
+      // Loose typing / Dynamic typing
+      let x = 100;
+      x = "Hello";
+      x = [10, true, "Hi"];
+      x = true;
+      x = function () {};
     </script>
   </head>
   <body></body>
