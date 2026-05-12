@@ -7,11 +7,21 @@
     <script>
       function OnLoadHandler() {
         let theHeader = document.getElementById("header"); // DOM API
-        console.log(theHeader.innerText);
+        //console.log(theHeader.innerText);
+        theHeader.innerText = "Dynamic text !";
+      }
+
+      function OnClickHandler() {
+        let theName = document.getElementById("txtName");
+        // theName.value = "Sumeet";
+        console.log(theName.value);
       }
     </script>
   </head>
   <body onload="OnLoadHandler()">
     <h1 id="header">Hello DOM !</h1>
+    Enter name :
+    <input type="text" id="txtName" />
+    <input type="button" onclick="OnClickHandler()" value="Get Name" />
   </body>
 </html>
