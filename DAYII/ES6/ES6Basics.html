@@ -10,19 +10,31 @@
       // Spread Operator - Arrays & Objects
       // With Arrays
 
-      let cars = ["BMW", "AUDI", "MERC"];
-      let moreCars = ["TATA", "MARUTI"];
-      let allCars = [...cars, ...moreCars, "HONDA"];
+      //   let cars = ["BMW", "AUDI", "MERC"];
+      //   let moreCars = ["TATA", "MARUTI"];
+      //   let allCars = [...cars, ...moreCars, "HONDA"];
 
-      // With Objects
-      let person = {
-        name: "Alcaraz",
-        country: "Spain",
-        sport: "Tennis",
-        ranking: 1,
-      };
+      //   // With Objects
+      //   let person = {
+      //     name: "Alcaraz",
+      //     country: "Spain",
+      //     sport: "Tennis",
+      //     ranking: 1,
+      //   };
 
-      let player = { ...person, ranking: 2, titles: 10 };
+      //   let player = { ...person, ranking: 2, titles: 10 };
+
+      // Destructuring - Arrays & Objects
+      //let cars = ["BMW", "AUDI", "MERC"];
+      //   let firstCar = cars[0];
+      //   let secondCar = cars[1];
+      // OR
+      let [firstCar, secondCar, , thirdCar = "HYUNDAI"] = [
+        "BMW",
+        "AUDI",
+        "MERC",
+        "HONDA",
+      ];
     </script>
   </head>
   <body></body>
