@@ -107,16 +107,23 @@
 
       // Default Parameters
 
-      function PrintBook(
-        title = "Unknown",
-        author = "Unknown",
-        numOfPages = 0,
-      ) {
-        console.log(title, author, numOfPages);
+      //   function PrintBook(
+      //     title = "Unknown",
+      //     author = "Unknown",
+      //     numOfPages = 0,
+      //   ) {
+      //     console.log(title, author, numOfPages);
+      //   }
+
+      //   PrintBook("Chava", "Ranjit Desai");
+      //   PrintBook();
+
+      // Rest Parameters
+      function PrintBook(author, ...titles) {
+        console.log(author, titles);
       }
 
-      PrintBook("Chava", "Ranjit Desai");
-      PrintBook();
+      PrintBook("Dr. APJ Abdul Kalam", "Wings Of Fire", "Ignited Minds");
     </script>
   </head>
   <body></body>
