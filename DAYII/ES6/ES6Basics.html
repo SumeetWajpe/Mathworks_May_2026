@@ -37,14 +37,14 @@
       ];
 
       // With Objects
-      let person = {
-        name: "Alcaraz",
-        country: "Spain",
-        sport: "Tennis",
-        ranking: 1,
-      };
-      let country = person.country;
-      let ranking = person.ranking;
+      //   let person = {
+      //     name: "Alcaraz",
+      //     country: "Spain",
+      //     sport: "Tennis",
+      //     ranking: 1,
+      //   };
+      //   let country = person.country;
+      //   let ranking = person.ranking;
 
       // if same name of the property exists in two objects we use alias
       //   let person1 = {
@@ -61,8 +61,31 @@
       //   };
 
       //   // OR
-      //   let { country, sport, _name: FNAME = "Unknown" } = person1;
+      //   let { country, sport, name: FNAME = "Unknown" } = person1;
       //   let { name: SNAME } = person2;
+
+      // Working with nested objects
+
+      let person = {
+        name: "Alcaraz",
+        country: "Spain",
+        sport: "Tennis",
+        stats: {
+          ranking: 2,
+          titles: {
+            total: 10,
+            wimbledon: 2023,
+            frenchOpen: 2022,
+          },
+          wasSeededNo1: true,
+        },
+      };
+
+      let {
+        stats: {
+          titles: { wimbledon: Wimbledon_Carlos },
+        },
+      } = person;
     </script>
   </head>
   <body></body>
