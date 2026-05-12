@@ -6,9 +6,15 @@
     <title>Document</title>
     <script>
       function OnLoadHandler() {
-        let theHeader = document.getElementById("header"); // DOM API
-        //console.log(theHeader.innerText);
-        theHeader.innerText = "Dynamic text !";
+        // let theHeader = document.getElementById("header"); // DOM API
+        // //console.log(theHeader.innerText);
+        // theHeader.innerText = "Dynamic text !";
+
+        let allPs = document.getElementsByTagName("p");
+        for (const element of allPs) {
+          element.style.border = "1px solid black";
+          element.style.padding = "3px ";
+        }
       }
 
       function OnClickHandler() {
@@ -23,5 +29,9 @@
     <label for="txtName">Enter name :</label>
     <input type="text" id="txtName" />
     <input type="button" onclick="OnClickHandler()" value="Get Name" />
+
+    <p>This is the 1st paragraph !</p>
+    <p>This is the 2nd paragraph !</p>
+    <p>This is the 3rd paragraph !</p>
   </body>
 </html>
