@@ -140,6 +140,30 @@
 
       // OR
       let book = { bookname, bookauthor };
+
+      // String templates
+      //console.log("The " + book.bookauthor + " has written " + book.bookname);
+      // OR
+      console.log(`The ${book.bookauthor} has written ${book.bookname}`);
+      let multiLineStr = `First Line
+         Second Line
+         Last Line`;
+      console.log(multiLineStr);
+
+      // Create a method GetCompanyDetails() that returns an
+      // object {cname,headquarter,noOfEmp,isMNC}
+      // Destructure cname & its headquarter and print it using string templates
+      function GetCompanyDetails() {
+        return {
+          cname: "Mathworks",
+          headquarter: "Massachusetts",
+          noOfEmp: 6000,
+          isMNC: true,
+        };
+      }
+
+      let { cname, headquarter } = GetCompanyDetails();
+      console.log(`The company ${cname} has headquarter in ${headquarter}`);
     </script>
   </head>
   <body></body>
