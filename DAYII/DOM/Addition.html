@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function AdditionHandler() {
+        let theFirstNum = document.getElementById("txtFNumber");
+        let theSecondNum = document.getElementById("txtSNumber");
+        let theResult = document.getElementById("spanResult");
+        let result = parseInt(theFirstNum.value) + parseInt(theSecondNum.value);
+        theResult.style.color = "green";
+        theResult.style.padding = "5px";
+        theResult.style.border = "1px solid blue";
+        theResult.innerText = result;
+      }
+    </script>
+  </head>
+  <body>
+    <label for="txtFNumber">Enter First Number :</label>
+    <input type="text" id="txtFNumber" />
+    <br />
+    <label for="txtSNumber">Enter Second Number :</label>
+    <input type="text" id="txtSNumber" />
+    <br />
+    <span>Result :</span>
+    <span id="spanResult"></span>
+    <input type="button" value="Add" onclick="AdditionHandler()" />
+  </body>
+</html>
