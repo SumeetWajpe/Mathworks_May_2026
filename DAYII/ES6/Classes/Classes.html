@@ -6,17 +6,27 @@
     <title>Document</title>
     <script>
       class Car {
-        constructor() {
-          this.name = "BMW";
-          this.speed = 200;
+        constructor(name = "BMW", speed = 200) {
+          this.name = name;
+          this.speed = speed;
         }
         accelerate() {
           console.log(`The car ${this.name} is running @ ${this.speed} kmph !`);
         }
       }
 
-      let carObj = new Car();
-      carObj.accelerate();
+      //   let carObj = new Car();
+      //   carObj.accelerate();
+
+      class JamesBondCar extends Car {
+        constructor(name, speed, canFly, canSubmerge) {
+          super(name, speed);
+          this.canFly = canFly;
+          this.canSubmerge = canSubmerge;
+        }
+      }
+
+      let jbc = new JamesBondCar("Aston Martin", 200, true, false);
     </script>
   </head>
   <body></body>
