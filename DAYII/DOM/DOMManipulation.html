@@ -8,11 +8,12 @@
       function AddSportToTheList() {
         let theSportName = document.getElementById("txtSportName");
         let sportList = document.getElementById("sportList");
-        //sportList.innerHTML += "<li>" + theSportName + "</li>";
+        sportList.innerHTML +=
+          "<li><strong>" + theSportName.value + "</strong></li>";
 
-        let newListItem = document.createElement("li");
-        newListItem.innerText = theSportName.value;
-        sportList.appendChild(newListItem);
+        // let newListItem = document.createElement("li");
+        // newListItem.innerText = theSportName.value;
+        // sportList.appendChild(newListItem);
         theSportName.value = "";
       }
     </script>
