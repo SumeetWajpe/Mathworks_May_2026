@@ -86,6 +86,24 @@
           titles: { wimbledon: Wimbledon_Carlos },
         },
       } = person;
+
+      let book = {
+        title: "Pavankhind",
+        author: "Ranjit Desai",
+        numOfPages: 200,
+      };
+      let anotherbook = {
+        title: "Chava",
+        author: "Ranjit Desai",
+        numOfPages: 200,
+      };
+
+      function PrintBook({ title, author }) {
+        console.log(title, author);
+      }
+
+      PrintBook(book);
+      PrintBook(anotherbook);
     </script>
   </head>
   <body></body>
