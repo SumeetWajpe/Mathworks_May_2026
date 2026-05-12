@@ -123,11 +123,23 @@
       //2. Can't have muliple rest parameters
       //3. Can't have an default value initializer for rest parameter
 
-      function PrintBook(author, ...titles) {
-        console.log(author, titles);
-      }
+      //   function PrintBook(author, ...titles) {
+      //     console.log(author, titles);
+      //   }
 
-      PrintBook("Dr. APJ Abdul Kalam", "Wings Of Fire", "Ignited Minds");
+      //   PrintBook("Dr. APJ Abdul Kalam", "Wings Of Fire", "Ignited Minds");
+
+      // Enhanced Object Literal Syntax
+
+      let bookname = "Wings Of Fire";
+      let bookauthor = "Dr. APJ Abdul Kalam";
+      //   let book = {
+      //     bookname: bookname,
+      //     bookauthor: bookauthor,
+      //   };
+
+      // OR
+      let book = { bookname, bookauthor };
     </script>
   </head>
   <body></body>
