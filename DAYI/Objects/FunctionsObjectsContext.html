@@ -38,10 +38,10 @@
         // Shape.call(this);
         // Rect {breadth: 10, length: 10, isSquare: false}
         this.isSquare = false;
+        Rect.prototype = new Shape();
       }
 
-      Rect.prototype = new Shape();
-    //   Rect {isSquare: false}
+      //   Rect {isSquare: false}
 
       var rect = new Rect();
     </script>
