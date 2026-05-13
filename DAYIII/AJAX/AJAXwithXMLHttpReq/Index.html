@@ -6,7 +6,9 @@
     <title>Document</title>
     <script src="GetPosts.js"></script>
     <script>
-      GetPosts();
+      GetPosts(function (posts) {
+        console.log(posts);
+      });
     </script>
   </head>
   <body></body>

@@ -1,4 +1,4 @@
-function GetPosts() {
+function GetPosts(callback) {
   // XMLHttpRequest
   // Get The data
   // Display data in console
@@ -9,7 +9,7 @@ function GetPosts() {
   xmlhttpReq.onreadystatechange = function () {
     console.log(xmlhttpReq.readyState);
     if (xmlhttpReq.readyState === 4 && xmlhttpReq.status === 200) {
-      console.log(xmlhttpReq.responseText);
+      callback(xmlhttpReq.responseText);
     }
   };
   xmlhttpReq.send();
