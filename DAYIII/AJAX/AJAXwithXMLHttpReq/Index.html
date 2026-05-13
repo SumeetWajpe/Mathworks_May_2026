@@ -6,15 +6,19 @@
     <title>Document</title>
     <script src="GetPosts.js"></script>
     <script>
-      GetPosts(function (posts) {
-        console.log(posts);
-        // convert JSON to js
-        let thePosts = JSON.parse(posts);
-        let postList = document.getElementById("postList");
-        for (const post of thePosts) {
-          let newPostItem = document.createElement("li");
-          newPostItem.innerText = post.title;
-          postList.appendChild(newPostItem);
+      GetPosts(function (posts, err) {
+        if (posts) {
+          console.log(posts);
+          // convert JSON to js
+          let thePosts = JSON.parse(posts);
+          let postList = document.getElementById("postList");
+          for (const post of thePosts) {
+            let newPostItem = document.createElement("li");
+            newPostItem.innerText = post.title;
+            postList.appendChild(newPostItem);
+          }
+        } else {
+          console.log(err);
         }
       });
     </script>
