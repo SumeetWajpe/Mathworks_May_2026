@@ -6,16 +6,34 @@
     <title>Document</title>
     <script src="GetPosts.js"></script>
     <script>
-      let thePromise = GetPosts();
-      thePromise.then(
-        function (posts) {
-          console.log(posts);
-        },
-        function (err) {
-          console.log(err);
-        },
-      );
+      function GetDataFromServer() {
+        let thePromise = GetPosts();
+        thePromise.then(
+          function (posts) {
+            let thePosts = JSON.parse(posts);
+            let postList = document.getElementById("postList");
+            for (const post of thePosts) {
+              let newPostItem = document.createElement("li");
+              newPostItem.innerText = post.title;
+              postList.appendChild(newPostItem);
+            }
+          },
+          function (err) {
+            console.log(err);
+          },
+        );
+      }
+
+      function ClickHandler() {
+        console.log("U Clicked !");
+      }
     </script>
   </head>
-  <body></body>
+  <body>
+    <input type="button" value="Get Posts" onclick="GetDataFromServer()" />
+    <input type="button" value="Click Me !" onclick="ClickHandler()" />
+
+    <h1>Post List (Promises)</h1>
+    <ul id="postList"></ul>
+  </body>
 </html>
