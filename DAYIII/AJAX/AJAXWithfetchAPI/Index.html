@@ -5,23 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script>
-      let promise = fetch("https://jsonplaceholder.typicode.com/postsss");
+      let promise = fetch("https://jsonplaceholder.typicode.com/posts");
       promise
         .then(function (response) {
-          console.log("Within first .then()");
+          //   console.log("Within first .then()");
           if (response.ok) {
             return response.json();
           }
           throw new Error("Something went wrong ! - " + response.status);
         })
         .then(posts => {
-          console.log("Reading posts (JS)....");
-          console.log(posts);
+          //   console.log("Reading posts (JS)....");
+          let postList = document.getElementById("postList");
+          for (const post of posts) {
+            let newPostItem = document.createElement("li");
+            newPostItem.innerText = post.title;
+            postList.appendChild(newPostItem);
+          }
         })
         .catch(function (err) {
           console.log(err);
         });
     </script>
   </head>
-  <body></body>
+  <body>
+    <h1>Post List (Promises)</h1>
+    <ul id="postList"></ul>
+  </body>
 </html>
