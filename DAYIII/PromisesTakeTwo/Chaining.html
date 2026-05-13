@@ -8,14 +8,15 @@
       console.log("Started..");
       let thePromise = new Promise((resolve, reject) => {
         setTimeout(() => {
-          resolve("Success");
+          //resolve("Success");
+          reject("Error");
         }, 2000);
       });
 
       thePromise
         .then(msg => {
           console.log("First .then()", msg);
-          throw new Error("Something went wrong !");
+          // throw new Error("Something went wrong !");
         })
         .then(
           () => console.log("Within second .then()"),
