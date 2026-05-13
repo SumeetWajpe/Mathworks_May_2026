@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      console.log("Started..");
+      let thePromise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("Success");
+        }, 2000);
+      });
+
+      thePromise
+        .then(msg => {
+          console.log("First .then()", msg);
+          throw new Error("Something went wrong !");
+        })
+        .then(
+          () => console.log("Within second .then()"),
+          err => {
+            console.log(err);
+          },
+        )
+        .then(() => console.log("Within third .then()"))
+        .catch(err => console.log(err));
+
+      console.log("Ended..");
+    </script>
+  </head>
+  <body></body>
+</html>
