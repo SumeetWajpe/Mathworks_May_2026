@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let promise = fetch("https://jsonplaceholder.typicode.com/postsss");
+      promise
+        .then(function (response) {
+          console.log("Within first .then()");
+          if (response.ok) {
+            return response.json();
+          }
+          throw new Error("Something went wrong ! - " + response.status);
+        })
+        .then(posts => {
+          console.log("Reading posts (JS)....");
+          console.log(posts);
+        })
+        .catch(function (err) {
+          console.log(err);
+        });
+    </script>
+  </head>
+  <body></body>
+</html>
