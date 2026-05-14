@@ -10,6 +10,10 @@ https://www.youtube.com/watch?v=8aGhZQkoFbQ
 
 https://www.jsv9000.app/
 
+# CSS Spceficity
+
+https://css-tricks.com/specifics-on-css-specificity/
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

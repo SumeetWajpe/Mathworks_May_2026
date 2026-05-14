@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* p:first-child {
+        border: 1px solid red;
+      } */
+      /* p:last-child {
+        border: 1px solid red;
+        padding: 5px;
+      } */
+      p:nth-child(2n) {
+        background-color: lightblue;
+        padding: 5px;
+      }
+      p:nth-child(2n + 1) {
+        background-color: lightsalmon;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>Paragraph - 1</p>
+      <p>Paragraph - 2</p>
+      <p>Paragraph - 3</p>
+      <p>Paragraph - 4</p>
+      <p>Paragraph - 5</p>
+    </div>
+
+    <section>
+      <h2>Header</h2>
+      <p>P is ! first child !</p>
+    </section>
+  </body>
+</html>
