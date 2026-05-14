@@ -5,27 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script>
-      let promise = fetch("https://jsonplaceholder.typicode.com/posts");
-      promise
-        .then(function (response) {
-          //   console.log("Within first .then()");
-          if (response.ok) {
-            return response.json();
-          }
-          throw new Error("Something went wrong ! - " + response.status);
-        })
-        .then(posts => {
-          //   console.log("Reading posts (JS)....");
-          let postList = document.getElementById("postList");
-          for (const post of posts) {
-            let newPostItem = document.createElement("li");
-            newPostItem.innerText = post.title;
-            postList.appendChild(newPostItem);
-          }
-        })
-        .catch(function (err) {
-          console.log(err);
-        });
+      class Posts {
+        constructor() {
+          this.posts = [];
+        }
+        GetAllPostsFromServer() {
+          let promise = fetch("https://jsonplaceholder.typicode.com/posts");
+          promise
+            .then(response => {
+              //   console.log("Within first .then()");
+              if (response.ok) {
+                return response.json();
+              }
+              throw new Error("Something went wrong ! - " + response.status);
+            })
+            .then(posts => {
+              //   console.log("Reading posts (JS)....");
+              let postList = document.getElementById("postList");
+              this.posts = posts; // ??
+              for (const post of this.posts) {
+                let newPostItem = document.createElement("li");
+                newPostItem.innerText = post.title;
+                postList.appendChild(newPostItem);
+              }
+            })
+            .catch(err => {
+              console.log(err);
+            });
+        }
+      }
+
+      let postObj = new Posts();
+      postObj.GetAllPostsFromServer();
     </script>
   </head>
   <body>
