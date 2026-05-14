@@ -1,3 +1,6 @@
+// 1. No DOM APIS
+// 2. No Window object
+// 3. XMLHttpRequest + fetch allowed
 onmessage = function (msgFromMain) {
   console.log(msgFromMain.data);
   let arr = [];
