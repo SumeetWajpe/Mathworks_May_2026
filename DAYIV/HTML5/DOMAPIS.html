@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="target">Target Div !</div>
+    <div class="target">Target Div !</div>
+    <div class="target">Target Div !</div>
+    <div class="target">Target Div !</div>
+    <div class="target">Target Div !</div>
+
+    <script>
+      //   let target = document.querySelector(".target"); // first match
+      //   target.style.backgroundColor = "yellow";
+
+      let allDivs = document.querySelectorAll(".target");
+
+      for (let index = 0; index < allDivs.length; index++) {
+        allDivs[index].style.backgroundColor = "yellow";
+      }
+
+      console.log(allDivs.length);
+    </script>
+  </body>
+</html>
