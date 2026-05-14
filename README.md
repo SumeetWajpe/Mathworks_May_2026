@@ -14,6 +14,10 @@ https://www.jsv9000.app/
 
 https://css-tricks.com/specifics-on-css-specificity/
 
+# CSS 3 Selectors
+
+https://www.w3.org/wiki/CSS3/Selectors
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
