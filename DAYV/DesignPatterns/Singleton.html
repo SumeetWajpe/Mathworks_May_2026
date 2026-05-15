@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let Singleton = (function () {
+        var instance;
+        function createInstance() {
+          var object = {};
+          return object;
+        }
+
+        return {
+          getInstance: function () {
+            if (!instance) {
+              instance = createInstance();
+            }
+            return instance;
+          },
+        };
+      })();
+
+      let singleTonObject = Singleton.getInstance();
+      singleTonObject.name = "Singleton !";
+      let anotherInstance = Singleton.getInstance();
+      console.log(anotherInstance);
+    </script>
+  </head>
+  <body></body>
+</html>

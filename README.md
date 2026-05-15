@@ -22,6 +22,10 @@ https://www.w3.org/wiki/CSS3/Selectors
 
 https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
+# Critical Rendering path
+
+https://web.dev/learn/performance/understanding-the-critical-path
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
