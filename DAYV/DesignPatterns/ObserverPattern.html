@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // Behaviourial Pattern
+
+      // subject
+      function Click() {
+        this.handlers = []; // observers
+      }
+
+      Click.prototype = {
+        subscribe: function (fn) {
+          this.handlers.push(fn);
+        },
+        unsubscribe: function (fn) {
+          this.handlers = this.handlers.filter(function (item) {
+            if (item !== fn) {
+              return item;
+            }
+          });
+        },
+        fire: function (o, thisObj) {
+          var scope = thisObj || window;
+          this.handlers.forEach(function (item) {
+            item.call(scope, o);
+          });
+        },
+      };
+
+      // Add a handler
+      function ClickHandler() {
+        console.log("U clicked ! -  ClickHandler");
+      }
+      function AnotherClickHandler() {
+        console.log("U clicked ! - AnotherClickHandler");
+      }
+
+      var click = new Click();
+      click.subscribe(ClickHandler);
+      click.subscribe(AnotherClickHandler);
+    //   click.fire("#Event 1");
+      click.unsubscribe(ClickHandler);
+      click.fire("#Event 2");
+    </script>
+  </head>
+  <body></body>
+</html>
