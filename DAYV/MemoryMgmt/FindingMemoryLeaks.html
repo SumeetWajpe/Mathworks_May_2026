@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //   function Test() {
+      //     var o = { name: "XYZ", location: "XYZ" };
+      //     // 100
+      //   }
+
+      //   Test();
+
+      // Not to use global variable having large memory allocation
+      // Not to use closure varibale to contain larger objects
+
+      var largerArray = [];
+      var isRunning = false;
+
+      function GrowHandler() {
+        isRunning = true;
+        if (isRunning) {
+          setTimeout(GrowInSize, 1000);
+        }
+        GrowInSize();
+      }
+
+      function GrowInSize() {
+        largerArray.push(new Array(1000000).fill("*"));
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="GrowHandler()">Grow in size !</button>
+    <!-- <button></button> -->
+  </body>
+</html>
